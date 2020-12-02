@@ -23,13 +23,13 @@ export class AppointmentService {
 
   // Get Single
   getBooking(id: string) {
-    this.bookingRef = this.db.object('/appointment/' + id);
+    this.bookingRef = this.db.object('/plug/' + id);
     return this.bookingRef;
   }
 
   // Get List
   getBookingList() {
-    this.bookingListRef = this.db.list('/appointment');
+    this.bookingListRef = this.db.list('/plug');
     return this.bookingListRef;
   }
 
@@ -44,7 +44,7 @@ export class AppointmentService {
 
   // Delete
   deleteBooking(id: string) {
-    this.bookingRef = this.db.object('/appointment/' + id);
+    this.bookingRef = this.db.object('/plug/' + id);
     this.bookingRef.remove();
   }
 }
